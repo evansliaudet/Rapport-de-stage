@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 section {
-    @apply p-7 md:p-10
+    @apply p-5 md:p-10
 }
 
 @keyframes infinite-carousel {
@@ -16,5 +16,9 @@ section {
   }
 
 .carousel {
-    animation: infinite-carousel 10s infinite linear;
+    animation: infinite-carousel 15s infinite linear;
+}
+
+h2 {
+ @apply text-5xl uppercase text-green;
 }
