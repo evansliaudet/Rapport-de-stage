@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #F9F7F0;
+}
+
 section {
     @apply p-5 md:p-10
 }
@@ -20,5 +24,5 @@ section {
 }
 
 h2 {
- @apply text-5xl uppercase text-green;
+ @apply text-5xl md:text-9xl uppercase text-green;
 }

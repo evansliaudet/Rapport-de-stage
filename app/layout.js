@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header/Header";
+import { LenisScroll } from "./components/LenisScroll";
 
 const inclusive = localFont({
   src: [
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased ${inclusive.className}`}>
         <Header />
+        <LenisScroll />
         {children}
       </body>
     </html>
