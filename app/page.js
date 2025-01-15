@@ -9,6 +9,7 @@ export default function Home() {
     <main className="">
       <Hero font={Frick} />
       <Contexte font={Frick} />
+      <section className="h-screen"></section>
     </main>
   );
 }
