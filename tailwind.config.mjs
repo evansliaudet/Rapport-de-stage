@@ -10,6 +10,8 @@ export default {
       colors: {
         yellow: "#FAC05E",
         green: "#8EB897",
+        beige: "#F9F7F0",
+        tomato: "#FFC09F",
       },
     },
   },
