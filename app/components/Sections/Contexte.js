@@ -33,14 +33,14 @@ export default function Contexte({ font }) {
           src={"/food-truck-génération-snack.jpg"}
           className="right-10"
           index={0}
-          rotate={6}
+          rotate={12}
         />
 
         <FloatingImage
           src={"/food-truck-image.jpg"}
           className="left-10 top-1/4 hidden lg:block"
           index={1}
-          rotate={-12}
+          rotate={12}
         />
 
         <FloatingImage
@@ -61,7 +61,7 @@ export default function Contexte({ font }) {
           src={"/code-image-2.jpg"}
           className="right-10 bottom-0"
           index={4}
-          rotate={-12}
+          rotate={12}
         />
 
         <p className="relative w-full text-end z-10 md:text-2xl">

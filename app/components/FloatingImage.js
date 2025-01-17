@@ -11,6 +11,7 @@ export default function FloatingImage({ src, className, rotate, index }) {
   useGSAP(() => {
     gsap.to(`.floating-image-${index}`, {
       y: "-60%",
+      ease: [0.76, 0, 0.24, 1],
       scrollTrigger: {
         trigger: `.floating-container-${index}`,
         scrub: 0,
