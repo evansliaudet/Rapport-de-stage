@@ -14,7 +14,7 @@ export default function FloatingImage({ src, className, rotate, index }) {
       ease: [0.76, 0, 0.24, 1],
       scrollTrigger: {
         trigger: `.floating-container-${index}`,
-        scrub: 0,
+        scrub: 3,
         start: "top bottom",
         end: "bottom top",
       },
@@ -25,7 +25,7 @@ export default function FloatingImage({ src, className, rotate, index }) {
       className={`absolute rounded-lg floating-container-${index} ${className}`}
     >
       <div
-        className={`bg-white p-5 px-10  ${
+        className={`${
           rotate < 0 ? `-rotate-${rotate * -1}` : `rotate-${rotate}`
         } floating-image-${index}`}
       >
