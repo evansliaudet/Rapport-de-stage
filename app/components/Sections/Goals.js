@@ -194,7 +194,9 @@ export default function Goals({ font }) {
 
       <div className="bg-tomato @apply p-5 md:p-10 relative z-20 flex flex-col gap-96">
         <div className="h-screen bg-tomato grid place-content-center gap-10">
-          <h3 className="text-5xl md:text-9xl font-bold">Framework</h3>
+          <h3 className="text-5xl md:text-8xl lg:text-9xl font-bold">
+            Framework
+          </h3>
 
           <div className="h-screen goal-container-1">
             <p className="text-3xl md:text-7xl text-center max-w-4xl flex flex-wrap sticky top-[40%]">
@@ -213,7 +215,7 @@ export default function Goals({ font }) {
         </div>
 
         <div className="h-screen bg-tomato grid place-content-center gap-10">
-          <h3 className="text-5xl md:text-9xl font-bold max-w-4xl">
+          <h3 className="text-5xl md:text-8xl lg:text-9xl font-bold max-w-4xl">
             Librairies d&apos;animations
           </h3>
 
@@ -234,7 +236,7 @@ export default function Goals({ font }) {
         </div>
 
         <div className="h-screen bg-tomato grid place-content-center gap-10">
-          <h3 className="text-5xl md:text-9xl font-bold">
+          <h3 className="text-5xl md:text-8xl lg:text-9xl font-bold">
             Site, site, site...
           </h3>
 
