@@ -10,17 +10,13 @@ const Frick = localFont({ src: "./fonts/Frick0.3-Regular.otf" });
 
 export default function Home() {
   return (
-    <main>
-      <div className="overflow-hidden">
-        <Hero font={Frick} />
-        <Contexte font={Frick} />
-        <Problem font={Frick} />
-        <Goals font={Frick} />
-      </div>
+    <main className="">
+      <Hero font={Frick} />
+      <Contexte font={Frick} />
+      <Problem font={Frick} />
+      <Goals font={Frick} />
       <AnimationExamples />
-      <div className="overflow-hidden">
-        <Projects font={Frick} />
-      </div>
+      <Projects font={Frick} />
     </main>
   );
 }
