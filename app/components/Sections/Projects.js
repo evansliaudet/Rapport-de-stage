@@ -19,21 +19,25 @@ export default function Projects({ font }) {
       name: "Maison Cosyli",
       text: "Site pour une agence de marketing gen Z",
       path: "https://maisoncosyli.fr/",
+      video: "cosyli",
     },
     {
       name: "GMA AUTO",
       text: "Site pour une agence de marketing gen Z",
       path: "https://www.gmaauto.fr/",
+      video: "GMA",
     },
     {
       name: "Génération Snack",
       text: "Site pour une agence de marketing gen Z",
       path: "https://www.generationsnack.fr/",
+      video: "GS-Snack",
     },
     {
       name: "Conciergerie Kera",
       text: "Site pour une agence de marketing gen Z",
       path: "https://conciergerie-kera.vercel.app/",
+      video: "Kera",
     },
   ];
 
@@ -55,6 +59,8 @@ export default function Projects({ font }) {
       });
     });
   });
+
+  const MotionLink = motion.create(Link);
 
   return (
     <section className="">
@@ -94,14 +100,18 @@ export default function Projects({ font }) {
         <div className="py-12 flex gap-24 flex-col md:flex-row justify-between items-start">
           <div className="flex justify-center items-center md:w-1/3 sticky top-44">
             <h3 className="uppercase font-bold text-4xl md:text-8xl lg:text-9xl xl:text-[15rem] overflow-hidden md:inline-flex h-[1em] text-[#1F1F1F] camera hidden">
-              <span className="">0</span>
+              [<span className="">0</span>
               <span className="flex flex-col slider">
                 {projects.map((_, index) => (
-                  <span className="inline-block" key={index}>
+                  <span
+                    className="inline-flex justify-center items-center"
+                    key={index}
+                  >
                     {index + 1}
                   </span>
                 ))}
               </span>
+              ]
             </h3>
           </div>
 
@@ -112,7 +122,7 @@ export default function Projects({ font }) {
                 key={index}
               >
                 <video
-                  src={`/video/anim-1.mp4`}
+                  src={`/video/projects/${project.video}.mp4`}
                   autoPlay
                   muted
                   loop
@@ -121,7 +131,7 @@ export default function Projects({ font }) {
                 >
                   Vidéo non supporté
                 </video>
-                <h3 className="uppercase font-bold text-4xl md:text-5xl lg:text-6xl xl:text-8xl relative overflow-hidden inline-block h-[1em] text-[#1F1F1F]">
+                <h3 className="uppercase font-bold text-4xl md:text-5xl lg:text-6xl xl:text-8xl relative text-[#1F1F1F]">
                   {project.name}
                 </h3>
 
@@ -129,12 +139,86 @@ export default function Projects({ font }) {
                   {project.text}
                 </p>
 
-                <Link
+                <MotionLink
                   href={project.path}
-                  className="py-3 px-10 uppercase font-medium rounded-full text-white bg-[#1F1F1F]"
+                  initial="initial"
+                  whileHover="hover"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-3 px-10 uppercase font-medium text-white relative flex justify-center items-center overflow-hidden"
                 >
-                  Visiter
-                </Link>
+                  <motion.span
+                    className="absolute inset-0 bg-[#1F1F1F] rounded origin-center background"
+                    variants={{
+                      initial: {
+                        scale: 1,
+                      },
+                      hover: {
+                        scale: 0.95,
+                      },
+                    }}
+                    transition={{
+                      ease: [0.76, 0, 0.24, 1],
+                      duration: 0.65,
+                    }}
+                  ></motion.span>
+                  <span className="inline-flex overflow-hidden">
+                    {"Visiter".split("").map((char, index) => (
+                      <div
+                        className="relative flex overflow-hidden"
+                        key={index}
+                      >
+                        <motion.span
+                          key={index}
+                          className="inline-flex will-change-transform"
+                          variants={{
+                            initial: {
+                              y: 0,
+                            },
+                            hover: {
+                              y: "-100%",
+                            },
+                          }}
+                          transition={{
+                            ease: [0.76, 0, 0.24, 1],
+                            duration: 0.65,
+                            delay: index * 0.025,
+                          }}
+                        >
+                          {char}
+                        </motion.span>
+                      </div>
+                    ))}
+                  </span>
+                  <span className="absolute inset-0 inline-flex justify-center items-center overflow-hidden">
+                    {"Visiter".split("").map((char, index) => (
+                      <div
+                        className="relative flex overflow-hidden"
+                        key={index}
+                      >
+                        <motion.span
+                          className="will-change-transform inline-block"
+                          key={index}
+                          variants={{
+                            initial: {
+                              y: "100%",
+                            },
+                            hover: {
+                              y: 0,
+                            },
+                          }}
+                          transition={{
+                            ease: [0.76, 0, 0.24, 1],
+                            duration: 0.65,
+                            delay: index * 0.025,
+                          }}
+                        >
+                          {char}
+                        </motion.span>
+                      </div>
+                    ))}
+                  </span>
+                </MotionLink>
               </div>
             ))}
           </div>

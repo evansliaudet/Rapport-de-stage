@@ -17,6 +17,7 @@ export default function Home() {
       <Goals font={Frick} />
       <AnimationExamples />
       <Projects font={Frick} />
+      <section className="h-screen"></section>
     </main>
   );
 }

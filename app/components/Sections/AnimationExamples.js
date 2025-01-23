@@ -16,6 +16,12 @@ export default function AnimationExamples() {
     const videoContainer = document.querySelector(".video-container");
 
     setWidth(videoContainer.clientWidth);
+
+    const handleResize = () => {
+      setWidth(videoContainer.clientWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
   }, [setWidth]);
 
   const x = useTransform(scrollYProgress, [0, 1], [0, width * -12]);
@@ -26,14 +32,14 @@ export default function AnimationExamples() {
       </h3>
 
       <div className="h-[1200vh]" ref={containerRef}>
-        <div className="h-screen sticky top-0 flex overflow-hidden">
+        <div className="sticky top-0 flex overflow-hidden">
           <motion.div
             className="flex justify-center items-center sticky flex-shrink-0 top-0 py-12"
             style={{ x }}
           >
             {[...Array(13)].map((_, index) => (
               <div
-                className="h-full w-full flex-0 justify-center items-center flex p-44 video-container"
+                className="h-screen w-screen flex-0 justify-center items-center px-5 flex video-container"
                 key={index}
               >
                 <video
@@ -42,7 +48,7 @@ export default function AnimationExamples() {
                   muted
                   loop
                   playsInline
-                  className="h-full w-full rounded"
+                  className=" rounded border border-black border-opacity-5 shadow-sm"
                 >
                   Vidéo non supporté
                 </video>
