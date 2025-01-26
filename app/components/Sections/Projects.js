@@ -14,6 +14,7 @@ export default function Projects({ font }) {
       name: "Hizia",
       text: "Site pour une agence de marketing gen Z",
       path: "https://www.hizia.xyz/en",
+      video: "hizia",
     },
     {
       name: "Maison Cosyli",
@@ -104,7 +105,7 @@ export default function Projects({ font }) {
               <span className="flex flex-col slider">
                 {projects.map((_, index) => (
                   <span
-                    className="inline-flex justify-center items-center"
+                    className="inline-flex justify-center items-center text-green"
                     key={index}
                   >
                     {index + 1}

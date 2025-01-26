@@ -5,6 +5,7 @@ import Problem from "./components/Sections/Problem";
 import Goals from "./components/Sections/Goals";
 import AnimationExamples from "./components/Sections/AnimationExamples";
 import Projects from "./components/Sections/Projects";
+import Conclusion from "./components/Sections/Conclusion";
 
 const Frick = localFont({ src: "./fonts/Frick0.3-Regular.otf" });
 
@@ -17,7 +18,7 @@ export default function Home() {
       <Goals font={Frick} />
       <AnimationExamples />
       <Projects font={Frick} />
-      <section className="h-screen"></section>
+      <Conclusion font={Frick} />
     </main>
   );
 }
