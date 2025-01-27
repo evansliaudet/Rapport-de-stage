@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { motion } from "motion/react";
 
 export default function Goals({ font }) {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -76,7 +77,9 @@ export default function Goals({ font }) {
       }
     );
 
-    gsap.to(".goals-1", {
+    const tl = gsap.timeline();
+
+    tl.to(".goals-1", {
       opacity: 1,
       stagger: 0.055,
       scrollTrigger: {
@@ -85,29 +88,27 @@ export default function Goals({ font }) {
         end: "bottom center",
         scrub: 0,
       },
-    });
-
-    gsap.to(".goals-2", {
-      opacity: 1,
-      stagger: 0.055,
-      scrollTrigger: {
-        trigger: ".goal-container-2",
-        start: "top center",
-        end: "bottom center",
-        scrub: 0,
-      },
-    });
-
-    gsap.to(".goals-3", {
-      opacity: 1,
-      stagger: 0.055,
-      scrollTrigger: {
-        trigger: ".goal-container-3",
-        start: "top center",
-        end: "bottom center",
-        scrub: 0,
-      },
-    });
+    })
+      .to(".goals-2", {
+        opacity: 1,
+        stagger: 0.055,
+        scrollTrigger: {
+          trigger: ".goal-container-2",
+          start: "top center",
+          end: "bottom center",
+          scrub: 0,
+        },
+      })
+      .to(".goals-3", {
+        opacity: 1,
+        stagger: 0.055,
+        scrollTrigger: {
+          trigger: ".goal-container-3",
+          start: "top center",
+          end: "bottom center",
+          scrub: 0,
+        },
+      });
 
     gsap.fromTo(
       ".tile-5",
@@ -179,7 +180,11 @@ export default function Goals({ font }) {
   });
 
   return (
-    <section className="px-0">
+    <motion.section
+      whileInView={() => ScrollTrigger.refresh()}
+      className="px-0"
+      id="goals"
+    >
       <h2 className={`${font.className} p-5 md:p-10`}>Objectifs et attentes</h2>
 
       <div className="w-full relative z-10 flex translate-y-[35%] tile-container">
@@ -266,6 +271,6 @@ export default function Goals({ font }) {
 
         <div className="w-1/4 h-screen rounded-s-xl bg-tomato tile-8"></div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -15,7 +15,7 @@ export default function Contexte({ font }) {
   const scrollValue = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden" id="context">
       <h2 className={`${font.className} pb-12`}>Contexte</h2>
       <div
         ref={containerRef}
