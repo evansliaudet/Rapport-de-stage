@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 
 export default function Hero({ font }) {
   return (
-    <section className="h-screen flex flex-col justify-between overflow-hidden">
+    <section
+      className="h-screen flex flex-col justify-between overflow-hidden"
+      id="hero"
+    >
       <motion.div
         initial="initial"
         whileInView="view"

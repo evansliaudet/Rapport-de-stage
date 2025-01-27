@@ -5,9 +5,12 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function Projects({ font }) {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
+  const videoRefs = useRef([]);
+  const loadedVideos = useRef(0);
 
   const projects = [
     {
@@ -64,7 +67,7 @@ export default function Projects({ font }) {
   const MotionLink = motion.create(Link);
 
   return (
-    <section className="">
+    <section className="" id="projects">
       <motion.h2
         initial="initial"
         whileInView="view"
@@ -123,6 +126,7 @@ export default function Projects({ font }) {
                 key={index}
               >
                 <video
+                  ref={(el) => (videoRefs.current[index] = el)}
                   src={`/video/projects/${project.video}.mp4`}
                   autoPlay
                   muted

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Problem({ font }) {
   return (
-    <section className="flex flex-col gap-24">
+    <section className="flex flex-col gap-24" id="problem">
       <h2 className={font.className}>Problème</h2>
 
       <div className="flex flex-col gap-5 lg:flex-row pt-8 md:pt-24 sticky top-0">
