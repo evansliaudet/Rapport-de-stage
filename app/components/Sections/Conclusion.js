@@ -13,15 +13,15 @@ export default function Conclusion({ font }) {
       bulletPoints: [
         {
           name: "Passion",
-          text: "Ce stage m'a fait aimer encore plus le développement web d'une part car j'ai réaliser un tas de choses intéressantes et d'une autre car j'ai découvert beaucoup comme le développement créatif qui m'était inconnu jusqu'alors.",
+          text: "Ce stage m'a fait aimer encore plus le développement web d'une part car j'ai pu créer un tas de choses intéressantes et d'une autre car j'ai découvert beaucoup, comme le développement créatif qui m'était inconnu jusqu'alors.",
         },
         {
           name: "Acharnement",
-          text: "Ce stage m'a permis de prouver à moi même qu'il ne faut jamais abandonner lorsque nous voulons faire ou apprendre quelque chose même si c'est compliqué au début.",
+          text: "Ce stage m'a permis de me prouver à moi même qu'il ne faut jamais abandonner lorsque nous voulons faire ou apprendre quelque chose de nouveau même si c'est compliqué au début.",
         },
         {
           name: "Autonomie",
-          text: "Je suis devenu beaucoup plus discipliné et assidu avec mon travail car j'ai du être autonome et apprendre et résoudre des problèmes par moi même.",
+          text: "Je suis devenu beaucoup plus discipliné et assidu dans mon travail car j'ai dû être autonome, apprendre et résoudre des problèmes par moi même.",
         },
       ],
     },
@@ -38,11 +38,11 @@ export default function Conclusion({ font }) {
         },
         {
           name: "Gestion du temps",
-          text: "En lien avec l'autonomie j'ai pu apprendre à gérer mon temps et à ne pas dépasser de date limite.",
+          text: "En lien avec l'autonomie j'ai pu apprendre à gérer mon temps et à ne pas dépasser les dates limites.",
         },
         {
           name: "Besoin client",
-          text: "Le stage m'a permis de travailler en collaboration avec des clients ce qui m'a forcer à être à l'écoute du client et de bien comprendre les besoins et envies.",
+          text: "Le stage m'a permis de travailler en collaboration avec des clients ce qui m'a permis de mieux comprendre les besoins et envies des clients.",
         },
       ],
     },
@@ -51,7 +51,7 @@ export default function Conclusion({ font }) {
       bulletPoints: [
         {
           name: "Envies",
-          text: "Je dirais que ce stage à beaucoup influencé mes envies futurs. Il m'a fait découvrir le monde du développement créatif.",
+          text: "Je dirais que ce stage a beaucoup influencé mes envies futurs. Il m'a fait découvrir le monde du développement créatif.",
         },
         {
           name: "Créativité ou technique ?",
