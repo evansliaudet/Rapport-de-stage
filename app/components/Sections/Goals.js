@@ -226,7 +226,7 @@ export default function Goals({ font }) {
 
           <div className="h-screen goal-container-2">
             <p className="text-3xl md:text-7xl text-center max-w-4xl flex flex-wrap sticky top-[40%]">
-              {"J'ai commencé par apprendre framer-motion. Puis une librairie encore plus connu. GSAP"
+              {"J'ai continué en apprenant framer-motion une librairie d'animation web. Puis une librairie encore plus connu. GSAP"
                 .split(" ")
                 .map((word, index) => (
                   <span

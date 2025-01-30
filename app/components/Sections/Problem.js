@@ -8,7 +8,7 @@ export default function Problem({ font }) {
       <div className="flex flex-col gap-5 lg:flex-row pt-8 md:pt-24 sticky top-0">
         <p className="text-3xl md:text-5xl xl:text-6xl lg:w-1/2">
           Connaissances de base dans la programmation web et connaissances quasi
-          inexistante dans le design web.
+          inexistantes dans le design web.
         </p>
 
         <Image
