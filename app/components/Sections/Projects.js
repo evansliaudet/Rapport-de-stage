@@ -5,12 +5,11 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function Projects({ font }) {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
   const videoRefs = useRef([]);
-  const loadedVideos = useRef(0);
 
   const projects = [
     {
@@ -21,25 +20,25 @@ export default function Projects({ font }) {
     },
     {
       name: "Maison Cosyli",
-      text: "Site pour une agence de marketing gen Z",
+      text: "Site pour un appartement pour de la location à courte durée",
       path: "https://maisoncosyli.fr/",
       video: "cosyli",
     },
     {
       name: "GMA AUTO",
-      text: "Site pour une agence de marketing gen Z",
+      text: "Site pour un garage automobile",
       path: "https://www.gmaauto.fr/",
       video: "GMA",
     },
     {
       name: "Génération Snack",
-      text: "Site pour une agence de marketing gen Z",
+      text: "Site pour un Food Truck Lyonnais",
       path: "https://www.generationsnack.fr/",
       video: "GS-Snack",
     },
     {
       name: "Conciergerie Kera",
-      text: "Site pour une agence de marketing gen Z",
+      text: "Site pour une coniergerie pour de la location à courte durée",
       path: "https://conciergerie-kera.vercel.app/",
       video: "Kera",
     },
